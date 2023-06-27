@@ -7,16 +7,19 @@ $(document).ready(function() {
         id = $(this).attr("id");
 
         if(id === "facebook-icon"){
-            $(this).attr("src", "../assets/img/Facebook-Icon.png");
+            $(this).attr("src", "../assets/img/icons/Facebook-Icon.png");
 
         }else if(id === "tiktok-icon"){
-            $(this).attr("src", "../assets/img/Tiktok-Icon.png");
+            $(this).attr("src", "../assets/img/icons/Tiktok-Icon.png");
 
         }else if(id === "instagram-icon"){
-            $(this).attr("src", "../assets/img/Instagram-Icon.png");
+            $(this).attr("src", "../assets/img/icons/Instagram-Icon.png");
 
         }else if(id === "twitter-icon"){
-            $(this).attr("src", "../assets/img/Twitter-Icon.png");
+            $(this).attr("src", "../assets/img/icons/Twitter-Icon.png");
+
+        }else if(id === "github-icon"){
+            $(this).attr("src", "../assets/img/icons/Github-Icon.png");
         }
     }, function() {
         $(this).attr("src", src);
@@ -36,10 +39,10 @@ $(document).ready(function() {
 
             }
         }else if(id === "tiktok-icon"){
-            var confirmed = confirm("Are you sure you want to be redirect to this link? ()");
+            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://www.tiktok.com/@iamlotlot)");
 
             if(confirmed){
-                window.location.href = "https://example.com";
+                window.location.href = "https://www.tiktok.com/@iamlotlot";
 
             }
 
@@ -58,6 +61,25 @@ $(document).ready(function() {
                 window.location.href = "https://twitter.com/Iam_Lotlot";
 
             }
+        }else if(id === "github-icon"){
+            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://github.com/IamLotlot)");
+
+            if(confirmed){
+                window.location.href = "https://github.com/IamLotlot";
+
+            }
         }
     });
+  });
+
+// Hover function for projects
+$(document).ready(function() {
+    $('.projects').hover(
+      function() {
+        $(this).find('h3, h4, img').css('display', 'block');
+      },
+      function() {
+        $(this).find('h3, h4, img').css('display', 'none');
+      }
+    );
   });

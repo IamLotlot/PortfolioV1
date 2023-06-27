@@ -1,5 +1,12 @@
+@font-face{
+    font-family: Belanosima;
+    src: url(../../fonts/Belanosima/Belanosima-Regular.ttf);
+}@font-face{
+    font-family: VT323;
+    src: url(../../fonts/VT323/VT323-Regular.ttf);
+}
 *{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: VT323;
 	margin: 0;
     scroll-behavior: smooth;
 }
@@ -33,9 +40,15 @@ nav ul li{
     list-style: none;
     outline-style: none;
 }
-#first-section{
+.sections{
     height: 100vh;
     width: 100%;
+}
+.titles{
+    font-size: 5rem;
+    color: var(--black);
+}
+#first-section{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,13 +67,18 @@ nav ul li{
 #text-container{
 }
 #text-container h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--black);
 }
 h1 span{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--black);
     color: var(--green);
 }
 #text-container h2{
+    font-size: 2rem;
+    margin-top: 1rem;
     color: var(--black);
 }
 h2 span{
@@ -75,6 +93,115 @@ h2 span{
     height: 4rem;
     margin-right: 1rem;
     transition: 0.3s;
-    filter: drop-shadow(0 0 3px var(--black));
+    filter: drop-shadow(0 0 0.2rem var(--black));
     cursor: pointer;
+}
+#media-container img:hover{
+    transition: 0.3s ease-out;
+    filter: drop-shadow(-0.4rem 0.4rem 0.2rem var(--black));
+}
+#second-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#third-section{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#projects-container{
+    width: 85%;
+    padding: 5rem 0 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.projects{
+    height: 35vh;
+    width: 30rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    box-shadow: -1rem 1rem 0.5rem var(--black);
+    border: 1px solid black;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.projects:before {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s;
+    content: "";
+    position: absolute;
+}
+.projects:hover:before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.projects:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 0;
+}
+.projects h3, 
+.projects h4, 
+.projects img{
+    z-index: 2;
+    margin-bottom: 0.5rem;
+    color: #F0ECE6;
+    display: none;
+}
+.projects h3{
+    font-size: 3rem;
+}
+#project-one{
+    background-image: url("../../assets/img/thumbnails/StudyBuddy.png");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-two{
+    background-image: url("../../assets/img/thumbnails/WebTool.png");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-three{
+    background-image: url("../../assets/img/thumbnails/DCMS.png");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-four{
+    background-image: url("../../assets/img/thumbnails/CoffeeScape.png");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-five{
+    background-image: url("../../assets/img/thumbnails/TrabaHanap.png");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-six{
+    background-image: url("../../assets/img/thumbnails/TSBS.PNG");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#fourth-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#fifth-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
