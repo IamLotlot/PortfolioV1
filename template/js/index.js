@@ -76,10 +76,116 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.projects').hover(
       function() {
-        $(this).find('h3, h4, img').css('display', 'block');
+        $(this).find('h3, h4, h5').css('display', 'block');
       },
       function() {
-        $(this).find('h3, h4, img').css('display', 'none');
+        $(this).find('h3, h4, h5').css('display', 'none');
       }
     );
   });
+
+// Hover funtion for the skills button
+
+
+// Click function for the skills button
+$(document).ready(function() {
+    $(".language-buttons").click(function() {
+        id = $(this).attr("id");
+        
+        switch(id){
+            case "html":
+                $(this).attr("src", "../assets/img/icons/HTML-Icon-Clicked.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+
+            case "css":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $(this).attr("src", "../assets/img/icons/CSS-Icon-Clicked.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+            
+            case "javascript":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $(this).attr("src", "../assets/img/icons/Javascript-Icon-Clicked.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+            
+            case "php":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $(this).attr("src", "../assets/img/icons/PHP-Icon-Clicked.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+            
+            case "sql":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $(this).attr("src", "../assets/img/icons/SQL-Icon-Clicked.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+            
+            case "java":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $(this).attr("src", "../assets/img/icons/Java-Icon-Clicked.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+            
+            case "cSharp":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $(this).attr("src", "../assets/img/icons/C%23-Icon-Clicked.png");
+                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+            break;
+            
+            case "python":
+                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+                $(this).attr("src", "../assets/img/icons/Python-Icon-Clicked.png");
+            break;
+        }
+    });
+  });
+
+// Display the skill details depending on the language button clicked
+function displaySkill(){
+    
+}
+

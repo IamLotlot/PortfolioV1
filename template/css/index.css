@@ -24,13 +24,17 @@ body::-webkit-scrollbar{
 }
 nav{
     height: 8vh;
+	top: 0;
+	z-index: 999;
+	box-shadow: 0 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.5);
+    background-color: var(--white);
     position: sticky;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
 }
 nav ul{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,10 +42,18 @@ nav ul{
 }
 nav ul li{
     list-style: none;
-    outline-style: none;
+    margin-right: 1rem;
+}
+nav ul li a{
+    font-size: 1.2rem;
+    color: var(--black);
+  	text-decoration: none;
+	font-weight: bold;
+	position: relative;
 }
 .sections{
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     width: 100%;
 }
 .titles{
@@ -156,7 +168,7 @@ h2 span{
 }
 .projects h3, 
 .projects h4, 
-.projects img{
+.projects h5{
     z-index: 2;
     margin-bottom: 0.5rem;
     color: #F0ECE6;
@@ -164,6 +176,13 @@ h2 span{
 }
 .projects h3{
     font-size: 3rem;
+}
+.projects h4{
+    font-size: 1.5rem;
+}
+.projects h5{
+    margin-top: 3rem;
+    font-size: 1rem;
 }
 #project-one{
     background-image: url("../../assets/img/thumbnails/StudyBuddy.png");
@@ -197,8 +216,28 @@ h2 span{
 }
 #fourth-section{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+#button-container{
+    width: 80%;
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#button-container img{
+    height: 20vh;
+    cursor: pointer;
+}
+#skill-details{
+    height: 50vh;
+    width: 50%;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    background-color: var(--black);
 }
 #fifth-section{
     display: flex;
