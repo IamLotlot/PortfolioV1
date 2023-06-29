@@ -77,23 +77,33 @@ nav ul li a{
     filter: drop-shadow(-1.5rem 1rem 0 var(--gray));
 }
 #text-container{
+    width: auto;
+    animation: glitch 1s linear infinite;
+    animation: blur 1s ease-out infinite;
 }
 #text-container h1{
     font-size: 3.5rem;
     color: var(--black);
 }
 h1 span{
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 1rem;
-    background-color: var(--black);
-    color: var(--green);
+    padding-bottom: 0.1rem;
+    border-bottom: 0.3rem solid var(--black);
 }
 #text-container h2{
+    width: auto;
+    min-width: 20rem;
+    max-width: 23rem;
     font-size: 2rem;
-    margin-top: 1rem;
-    color: var(--black);
+    margin-top: 2rem;
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 1rem;
+    color: var(--white);
+    background-color: var(--black);
 }
-h2 span{
+#aspiring{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--green);
 }
 #media-container{
     height: 7rem;
@@ -234,10 +244,42 @@ h2 span{
 }
 #skill-details{
     height: 50vh;
-    width: 50%;
+    width: 38rem;
     margin-top: 5rem;
     border-radius: 1rem;
-    background-color: var(--black);
+    background-image: url("../../assets/img/icons/Monitor-Off.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#skill-image{
+    height: 68%;
+    width: 7rem;
+    margin: 0 0.5rem 0 5rem;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#details-container{
+    height: 13rem;
+    width: 20rem;
+    color: var(--black);
+    display: none;
+    align-items: start;
+    justify-content: center;
+}
+#skill-language{
+    font-size: 3.5rem;
+}
+#skill-experience{
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+#skill-story{
+    font-size: 1.3rem;
 }
 #fifth-section{
     display: flex;
