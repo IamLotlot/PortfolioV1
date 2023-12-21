@@ -134,8 +134,29 @@ h1 span{
     align-items: center;
     justify-content: center;
 }
-#projects-container{
-    width: 85%;
+#project-btn-grp{
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-btn{
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    margin: 0 2rem 0 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    color: var(--gray);
+    border: none;
+    background-color: var(--black);
+    cursor: pointer;
+}
+#web-btn{
+    color: var(--green);
+}
+.projects-list{
+    width: 100%;
     padding: 5rem 0 5rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +164,7 @@ h1 span{
 }
 .projects{
     height: 35vh;
-    width: 30rem;
+    width: 40rem;
     border-radius: 1rem;
     margin-bottom: 4rem;
     box-shadow: -1rem 1rem 0.5rem var(--black);
@@ -180,8 +201,11 @@ h1 span{
 .projects h5{
     z-index: 2;
     margin-bottom: 0.5rem;
+    padding: 0 1rem 0 1rem;
     color: #F0ECE6;
     display: none;
+    /* align-items: center;
+    justify-content: center; */
 }
 .projects h3{
     font-size: 3rem;
@@ -193,33 +217,72 @@ h1 span{
     margin-top: 3rem;
     font-size: 1rem;
 }
-#project-one{
-    background-image: url("../../assets/img/thumbnails/StudyBuddy.png");
+/* Webs */
+#project-web-one{
+    background-image: url("../../assets/img/thumbnails/web/StudyBuddy.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
-#project-two{
-    background-image: url("../../assets/img/thumbnails/WebTool.png");
+#project-web-two{
+    background-image: url("../../assets/img/thumbnails/web/WebTool.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
-#project-three{
-    background-image: url("../../assets/img/thumbnails/DCMS.png");
+#project-web-three{
+    background-image: url("../../assets/img/thumbnails/web/DCMS.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
-#project-four{
-    background-image: url("../../assets/img/thumbnails/CoffeeScape.png");
+#project-web-four{
+    background-image: url("../../assets/img/thumbnails/web/CoffeeScape.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
-#project-five{
-    background-image: url("../../assets/img/thumbnails/TrabaHanap.png");
+#project-web-five{
+    background-image: url("../../assets/img/thumbnails/web/TrabaHanap.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
-#project-six{
-    background-image: url("../../assets/img/thumbnails/TSBS.PNG");
+/* Pixel Arts */
+#project-pixel-one{
+    width: 30rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Spirited-Away-Train-Scene.webp");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-two{
+    width: 33rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Finn's-Swords.png");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-three{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-four{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Finn-The-Human.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-five{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Jake-The-Dog.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-six{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+/* Applications */
+#project-app-one{
+    background-image: url("../../assets/img/thumbnails/app/TSBS.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
@@ -242,22 +305,24 @@ h1 span{
     cursor: pointer;
 }
 #skill-details{
-    height: 50vh;
-    width: 38rem;
+    min-height: 50vh;
+    height: auto;
+    width: 40rem;
     margin-top: 5rem;
     border-radius: 1rem;
     background-image: url("../../assets/img/icons/Monitor-Off.gif");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center center;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
 #skill-image{
-    height: 68%;
-    width: 7rem;
-    margin: 0 0.5rem 0 5rem;
-    border: none;
+    height: 29.5vh;
+    width: 18%;
+    margin: 0 2rem 0 3rem;
+    /* border: none; */
     display: none;
     align-items: center;
     justify-content: center;
@@ -287,12 +352,19 @@ h1 span{
     align-items: center;
     justify-content: center;
 }
+#certificate-wrapper{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
 .certificate-containers{
     margin-top: 3rem;
 }
 .certificate-images{
-    height: 15rem;
-    width: 20rem;
+    height: 20rem;
+    width: auto;
     border-radius: 1rem;
     border: 0.3rem solid var(--black);
 }

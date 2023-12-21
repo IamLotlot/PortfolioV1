@@ -265,3 +265,36 @@ function displaySkill(language){
     }
 }
 
+// Function for the web, pixel and app button on My Projects
+$(document).ready(function() {
+    $("#web-btn").click(function() {
+        
+        $("#web-btn").css("color", "#72EF36");
+        $("#pixel-btn").css("color", "#A6A6A6");
+        $("#app-btn").css("color", "#A6A6A6");
+
+        $("#web-projects").fadeIn();
+        $("#pixel-projects").hide();
+        $("#app-projects").hide();
+    })
+
+    $("#pixel-btn").click(function() {
+        $("#web-btn").css("color", "#A6A6A6");
+        $("#pixel-btn").css("color", "#72EF36");
+        $("#app-btn").css("color", "#A6A6A6");
+
+        $("#web-projects").hide();
+        $("#pixel-projects").fadeIn();;
+        $("#app-projects").hide();
+    })
+
+    $("#app-btn").click(function() {
+        $("#web-btn").css("color", "#A6A6A6");
+        $("#pixel-btn").css("color", "#A6A6A6");
+        $("#app-btn").css("color", "#72EF36");
+
+        $("#web-projects").hide();
+        $("#pixel-projects").hide();
+        $("#app-projects").fadeIn();;
+    })
+});
