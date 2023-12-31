@@ -166,7 +166,7 @@ h1 span{
     height: 35vh;
     width: 40rem;
     border-radius: 1rem;
-    margin-bottom: 4rem;
+    margin: 0 1rem 4rem 1rem;
     box-shadow: -1rem 1rem 0.5rem var(--black);
     border: 1px solid black;
     transition: 0.3s;
@@ -263,30 +263,42 @@ h1 span{
     background-size: cover;
 }
 #project-pixel-four{
-    width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time.gif");
+    width: 35rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Lotlot\'s-Terraria-Set.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-five{
     width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Gazer.png");
+    background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time.gif");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-six{
     width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Finn-The-Human.gif");
+    background-image: url("../../assets/img/thumbnails/pixel/Gazer.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-seven{
     width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Jake-The-Dog.gif");
+    background-image: url("../../assets/img/thumbnails/pixel/Feight.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-eight{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Finn-The-Human.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-nine{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Jake-The-Dog.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-ten{
     width: 18rem;
     background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
     background-repeat: no-repeat;   
