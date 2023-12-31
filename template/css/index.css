@@ -257,24 +257,36 @@ h1 span{
     background-size: cover;
 }
 #project-pixel-three{
-    width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time.gif");
+    width: 45rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Halloween-Ghost.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-four{
     width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Finn-The-Human.gif");
+    background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time.gif");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-five{
     width: 18rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Jake-The-Dog.gif");
+    background-image: url("../../assets/img/thumbnails/pixel/Gazer.png");
     background-repeat: no-repeat;   
     background-size: cover;
 }
 #project-pixel-six{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Finn-The-Human.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-seven{
+    width: 18rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Jake-The-Dog.gif");
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+#project-pixel-eight{
     width: 18rem;
     background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
     background-repeat: no-repeat;   
