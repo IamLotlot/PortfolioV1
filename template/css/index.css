@@ -87,6 +87,7 @@ nav ul li a{
 }
 h1 span{
     padding-bottom: 0.1rem;
+    font-size: 4.5rem;
 }
 #text-container h2{
     width: auto;
@@ -343,7 +344,7 @@ h1 span{
     justify-content: center;
 }
 #skill-image{
-    height: 29.5vh;
+    height: 25vh;
     width: 18%;
     margin: 0 2rem 0 3rem;
     /* border: none; */
