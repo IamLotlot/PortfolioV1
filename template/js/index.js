@@ -210,56 +210,56 @@ function displaySkill(language){
         case "html":
             $("#skill-image").attr("src", "../assets/img/icons/HTML-Container.gif");
             $("#skill-language").text("HTML");
-            $("#skill-experience").text("3 years Exp (2020-2023)");
+            $("#skill-experience").text("2020-2023 & 2026");
             $("#skill-story").text("My school introduced the basics in my first year college and started to self learn more about HTML and web developement.");
         break;
         
         case "css":
             $("#skill-image").attr("src", "../assets/img/icons/CSS-Container.gif");
             $("#skill-language").text("CSS");
-            $("#skill-experience").text("3 years Exp (2020-2023)");
-            $("#skill-story").text("I gave more attention in CSS than HTML as this was more about UI interface or designs.");
+            $("#skill-experience").text("2020-2023 & 2026");
+            $("#skill-story").text("I gave more attention in CSS than HTML bacause I love how a UI interface or designs looks stunning.");
         break;
 
         case "javascript":
             $("#skill-image").attr("src", "../assets/img/icons/Javascript-Container.gif");
             $("#skill-language").text("Javascript");
-            $("#skill-experience").text("3 years Exp (2020-2023)");
+            $("#skill-experience").text("2020-2023 & 2026");
             $("#skill-story").text("I mostly focus in Javascript in my web development progress as this makes the website more interactive.");
         break;
         
         case "php":
             $("#skill-image").attr("src", "../assets/img/icons/PHP-Container.gif");
             $("#skill-language").text("PHP");
-            $("#skill-experience").text("3 years Exp (2020-2023)");
+            $("#skill-experience").text("2020-2023 & 2026");
             $("#skill-story").text("Same progress with other languages I used in web development.");
         break;
         
         case "sql":
             $("#skill-image").attr("src", "../assets/img/icons/SQL-Container.gif");
             $("#skill-language").text("SQL");
-            $("#skill-experience").text("5 years Exp (2018-2023)");
+            $("#skill-experience").text("2018-2023 & 2026");
             $("#skill-story").text("Started to use SQL through PHPMyAdmin when I was in 1st year Senior High School with Java till now with web development.");
         break;
         
         case "java":
             $("#skill-image").attr("src", "../assets/img/icons/Java-Container.gif");
             $("#skill-language").text("Java");
-            $("#skill-experience").text("2 years Exp (2018-2020)");
+            $("#skill-experience").text("2018-2020");
             $("#skill-story").text("Same starting point with SQL as I used both of them at the same time in my Senior High days.");
         break;
         
         case "cSharp":
             $("#skill-image").attr("src", "../assets/img/icons/C%23-Container.gif");
             $("#skill-language").text("C#");
-            $("#skill-experience").text("1 week Exp (2023)");
+            $("#skill-experience").text("2023");
             $("#skill-story").text("Started to learn more about game development as this is one of my dream and used Unity along side it but my device cannot keep up so I stopped.");
         break;
         
         case "python":
             $("#skill-image").attr("src", "../assets/img/icons/Python-Container.gif");
             $("#skill-language").text("Python");
-            $("#skill-experience").text("2 weeks Exp (2021)");
+            $("#skill-experience").text("2021");
             $("#skill-story").text("Started to learn this from my school but just a few days and continue it for a week for starting a web application through python.");
         break;
     }

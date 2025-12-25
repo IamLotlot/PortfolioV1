@@ -165,6 +165,7 @@ h1 span{
 }
 .projects{
     height: 35vh;
+    max-width: 100%;
     width: 40rem;
     border-radius: 1rem;
     margin: 0 1rem 4rem 1rem;
@@ -177,6 +178,8 @@ h1 span{
     justify-content: center;
     position: relative;
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
 }
 .projects:before {
     height: 100%;
@@ -221,95 +224,63 @@ h1 span{
 /* Webs */
 #project-web-one{
     background-image: url("../../assets/img/thumbnails/web/StudyBuddy.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-web-two{
     background-image: url("../../assets/img/thumbnails/web/WebTool.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-web-three{
     background-image: url("../../assets/img/thumbnails/web/DCMS.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-web-four{
     background-image: url("../../assets/img/thumbnails/web/CoffeeScape.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-web-five{
     background-image: url("../../assets/img/thumbnails/web/TrabaHanap.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 /* Pixel Arts */
 #project-pixel-one{
     width: 30rem;
     background-image: url("../../assets/img/thumbnails/pixel/Spirited-Away-Train-Scene.webp");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-two{
-    width: 33rem;
+    width: 45rem;
     background-image: url("../../assets/img/thumbnails/pixel/Finn's-Swords.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-three{
-    width: 45rem;
+    width: 50rem;
     background-image: url("../../assets/img/thumbnails/pixel/Halloween-Ghost.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-four{
-    width: 35rem;
+    width: 41rem;
     background-image: url("../../assets/img/thumbnails/pixel/Lotlot\'s-Terraria-Set.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-five{
-    width: 18rem;
+    width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time.gif");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-six{
-    width: 18rem;
+    width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Gazer.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-seven{
-    width: 18rem;
+    width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Feight.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-eight{
-    width: 18rem;
+    width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Finn-The-Human.gif");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-nine{
-    width: 18rem;
+    width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Jake-The-Dog.gif");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #project-pixel-ten{
-    width: 18rem;
+    width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 /* Applications */
 #project-app-one{
     background-image: url("../../assets/img/thumbnails/app/TSBS.png");
-    background-repeat: no-repeat;   
-    background-size: cover;
 }
 #fourth-section{
     display: flex;
@@ -330,9 +301,8 @@ h1 span{
     cursor: pointer;
 }
 #skill-details{
-    min-height: 50vh;
-    height: auto;
-    width: 40rem;
+    height: 50vh;
+    width: 35rem;
     margin-top: 5rem;
     border-radius: 1rem;
     background-image: url("../../assets/img/icons/Monitor-Off.gif");
@@ -344,17 +314,19 @@ h1 span{
     justify-content: center;
 }
 #skill-image{
-    height: 25vh;
-    width: 18%;
+    height: 40%;
+    width: 15%;
     margin: 0 2rem 0 3rem;
     /* border: none; */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 1))
+        drop-shadow(0 5px 5px rgba(0, 0, 0, 1));
     display: none;
     align-items: center;
     justify-content: center;
 }
 #details-container{
     height: 13rem;
-    width: 20rem;
+    width: 18rem;
     color: var(--black);
     display: none;
     align-items: start;
@@ -388,8 +360,8 @@ h1 span{
     margin-top: 3rem;
 }
 .certificate-images{
-    height: 20rem;
-    width: auto;
+    height: 30vh;
+    width: 100%;
     border-radius: 1rem;
     border: 0.3rem solid var(--black);
 }
@@ -401,6 +373,7 @@ h1 span{
     justify-content: start;
 }
 #contact-wrapper{
+    width: 70vw;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
@@ -408,6 +381,7 @@ h1 span{
     justify-content: center;
 }
 .contact-con{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -421,13 +395,13 @@ h1 span{
     justify-content: center;
 }
 #email-icon{
-    width: 10rem;
+    width: 10vw;
 }
 #phone-icon{
-    width: 10rem;
+    width: 10vw;
 }
 .contact-con h2{
-    font-size: 3rem;
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
     width: 30rem;
     color: var(--black);
 }
