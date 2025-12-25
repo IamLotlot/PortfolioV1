@@ -392,3 +392,41 @@ h1 span{
     border-radius: 1rem;
     border: 0.3rem solid var(--black);
 }
+#sixth-section{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+#contact-wrapper{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contact-con img{
+    background-size: cover;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#email-icon{
+    width: 10rem;
+}
+#phone-icon{
+    width: 10rem;
+}
+.contact-con h2{
+    font-size: 3rem;
+    width: 30rem;
+    color: var(--black);
+}
