@@ -150,6 +150,7 @@ nav ul li a{
     align-items: center;
     justify-content: center;
 }
+
 #project-btn-grp{
     width: 100%;
     margin-top: 3rem;
@@ -168,15 +169,35 @@ nav ul li a{
     background-color: var(--black);
     cursor: pointer;
 }
-#web-btn{
-    color: var(--green);
-}
 .projects-list{
     width: 100%;
     padding: 5rem 0 5rem 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    padding: 5rem 0; */
+
+    /* animation base */
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease-in-out;
+}
+.hidden{
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.active-btn{
+    color: var(--green);;
 }
 .projects{
     height: 35vh;

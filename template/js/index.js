@@ -1,3 +1,4 @@
+console.log("JS is running");
 // Hover functions for the social media icons
 $(document).ready(function() {
     var src;
@@ -266,35 +267,53 @@ function displaySkill(language){
 }
 
 // Function for the web, pixel and app button on My Projects
-$(document).ready(function() {
-    $("#web-btn").click(function() {
+
+// $(document).ready(function() {
+//     $("#web-btn").click(function() {
         
-        $("#web-btn").css("color", "#72EF36");
-        $("#pixel-btn").css("color", "#A6A6A6");
-        $("#app-btn").css("color", "#A6A6A6");
+//         $("#web-btn").css("color", "#72EF36");
+//         $("#pixel-btn").css("color", "#A6A6A6");
+//         $("#app-btn").css("color", "#A6A6A6");
 
-        $("#web-projects").fadeIn();
-        $("#pixel-projects").hide();
-        $("#app-projects").hide();
-    })
+//         $("#web-projects").fadeIn();
+//         $("#pixel-projects").hide();
+//         $("#app-projects").hide();
+//     })
 
-    $("#pixel-btn").click(function() {
-        $("#web-btn").css("color", "#A6A6A6");
-        $("#pixel-btn").css("color", "#72EF36");
-        $("#app-btn").css("color", "#A6A6A6");
+//     $("#pixel-btn").click(function() {
+//         $("#web-btn").css("color", "#A6A6A6");
+//         $("#pixel-btn").css("color", "#72EF36");
+//         $("#app-btn").css("color", "#A6A6A6");
 
-        $("#web-projects").hide();
-        $("#pixel-projects").fadeIn();;
-        $("#app-projects").hide();
-    })
+//         $("#web-projects").hide();
+//         $("#pixel-projects").fadeIn();;
+//         $("#app-projects").hide();
+//     })
 
-    $("#app-btn").click(function() {
-        $("#web-btn").css("color", "#A6A6A6");
-        $("#pixel-btn").css("color", "#A6A6A6");
-        $("#app-btn").css("color", "#72EF36");
+//     $("#app-btn").click(function() {
+//         $("#web-btn").css("color", "#A6A6A6");
+//         $("#pixel-btn").css("color", "#A6A6A6");
+//         $("#app-btn").css("color", "#72EF36");
 
-        $("#web-projects").hide();
-        $("#pixel-projects").hide();
-        $("#app-projects").fadeIn();;
-    })
+//         $("#web-projects").hide();
+//         $("#pixel-projects").hide();
+//         $("#app-projects").fadeIn();;
+//     })
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".project-btn");
+  const sections = document.querySelectorAll(".projects-list");
+
+  buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const target = button.id.replace("-btn", "-projects");
+
+    buttons.forEach(btn => btn.classList.remove("active-btn"));
+    button.classList.add("active-btn");
+
+    sections.forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(target).classList.remove("hidden");
+  });
+  });
 });
