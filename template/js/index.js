@@ -1,8 +1,11 @@
+// 
+
+const mediaIcons = document.querySelectorAll(".media-icons");
+const languageIcons = document.querySelectorAll(".language-buttons");
+
 // Click and hover functions for the social media icons
 
-const icons = document.querySelectorAll(".media-icons");
-
-const iconData = {
+const mediaData = {
     "facebook-icon": {
         hover : "../assets/img/icons/Facebook-Icon.png",
         default : "../assets/img/icons/Facebook-Icon-Green.png",
@@ -30,152 +33,186 @@ const iconData = {
     }
 };
 
-icons.forEach(icon => {
-    const id = icon.id;
+mediaIcons.forEach(media => {
+    const id = media.id;
     // Hover in
-    icon.addEventListener("mouseenter", () => {
-        icon.src = iconData[id].hover;
+    media.addEventListener("mouseenter", () => {
+        media.src = mediaData[id].hover;
     });
     // Hover out
-    icon.addEventListener("mouseleave", () => {
-        icon.src = iconData[id].default;
+    media.addEventListener("mouseleave", () => {
+        media.src = mediaData[id].default;
     });
     // Click
-    icon.addEventListener("click", () => {
-        const confirmed = confirm(`Go to ${iconData[id].link}?`);
+    media.addEventListener("click", () => {
+        const confirmed = confirm(`Go to ${mediaData[id].link}?`);
         if (confirmed){
-            window.location.href = iconData[id].link;
+            window.location.href = mediaData[id].link;
         }
     });
 });
 
-// Hover function for projects
-$(document).ready(function() {
-    $('.projects').hover(
-      function() {
-        $(this).find('h3, h4, h5').css('display', 'block');
-      },
-      function() {
-        $(this).find('h3, h4, h5').css('display', 'none');
-      }
-    );
-  });
-
-// Hover funtion for the skills button
-
-
 // Click function for the skills button
-$(document).ready(function() {
-    $(".language-buttons").click(function() {
-        id = $(this).attr("id");
-        
-        switch(id){
-            case "html":
-                $(this).attr("src", "../assets/img/icons/HTML-Icon-Clicked.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
 
-                displaySkill(id);
-            break;
+const languageData = {
+    "html": {
+        click : "../assets/img/icons/HTML-Icon-Clicked.png",
+        default : "../assets/img/icons/HTML-Icon.png",
+    },
+    "css": {
+        click : "../assets/img/icons/CSS-Icon-Clicked.png",
+        default : "../assets/img/icons/CSS-Icon.png",
+    },
+    "javascript": {
+        click : "../assets/img/icons/Javascript-Icon-Clicked.png",
+        default : "../assets/img/icons/Javascript-Icon.png",
+    },
+    "php": {
+        click : "../assets/img/icons/PHP-Icon-Clicked.png",
+        default : "../assets/img/icons/PHP-Icon.png",
+    },
+    "sql": {
+        click : "../assets/img/icons/SQL-Icon-Clicked.png",
+        default : "../assets/img/icons/SQL-Icon.png",
+    },
+    "java": {
+        click : "../assets/img/icons/Java-Icon-Clicked.png",
+        default : "../assets/img/icons/Java-Icon.png",
+    },
+    "cSharp": {
+        click : "../assets/img/icons/C%23-Icon-Clicked.png",
+        default : "../assets/img/icons/C%23-Icon.png",
+    },
+    "python": {
+        click : "../assets/img/icons/Python-Icon-Clicked.png",
+        default : "../assets/img/icons/Python-Icon.png",
+    }
+};
 
-            case "css":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $(this).attr("src", "../assets/img/icons/CSS-Icon-Clicked.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
-
-                displaySkill(id);
-            break;
-            
-            case "javascript":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $(this).attr("src", "../assets/img/icons/Javascript-Icon-Clicked.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
-
-                displaySkill(id);
-            break;
-            
-            case "php":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $(this).attr("src", "../assets/img/icons/PHP-Icon-Clicked.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
-
-                displaySkill(id);
-            break;
-            
-            case "sql":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $(this).attr("src", "../assets/img/icons/SQL-Icon-Clicked.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
-
-                displaySkill(id);
-            break;
-            
-            case "java":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $(this).attr("src", "../assets/img/icons/Java-Icon-Clicked.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
-
-                displaySkill(id);
-            break;
-            
-            case "cSharp":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $(this).attr("src", "../assets/img/icons/C%23-Icon-Clicked.png");
-                $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
-
-                displaySkill(id);
-            break;
-            
-            case "python":
-                $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
-                $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
-                $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
-                $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
-                $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
-                $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
-                $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
-                $(this).attr("src", "../assets/img/icons/Python-Icon-Clicked.png");
-
-                displaySkill(id);
-            break;
-        }
+languageIcons.forEach(language => {
+    const id = language.id;
+    language.addEventListener("click", () => {
+        languageIcons.forEach(lang => {
+            const id = lang.id;
+            lang.src = languageData[id].default;
+            // const skill = languageData[lang.id];
+            // document.getElementById("skill-language").textContent = skill.name
+        });
+        language.src = languageData[id].click;
     });
-  });
+});
+
+// $(document).ready(function() {
+//     $(".language-buttons").click(function() {
+//         id = $(this).attr("id");
+        
+//         switch(id){
+//             case "html":
+//                 $(this).attr("src", "../assets/img/icons/HTML-Icon-Clicked.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+
+//             case "css":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/CSS-Icon-Clicked.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+            
+//             case "javascript":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/Javascript-Icon-Clicked.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+            
+//             case "php":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/PHP-Icon-Clicked.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+            
+//             case "sql":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/SQL-Icon-Clicked.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+            
+//             case "java":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/Java-Icon-Clicked.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+            
+//             case "cSharp":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/C%23-Icon-Clicked.png");
+//                 $("#python").attr("src", "../assets/img/icons/Python-Icon.png");
+
+//                 displaySkill(id);
+//             break;
+            
+//             case "python":
+//                 $("#html").attr("src", "../assets/img/icons/HTML-Icon.png");
+//                 $("#css").attr("src", "../assets/img/icons/CSS-Icon.png");
+//                 $("#javascript").attr("src", "../assets/img/icons/Javascript-Icon.png");
+//                 $("#php").attr("src", "../assets/img/icons/PHP-Icon.png");
+//                 $("#sql").attr("src", "../assets/img/icons/SQL-Icon.png");
+//                 $("#java").attr("src", "../assets/img/icons/Java-Icon.png");
+//                 $("#cSharp").attr("src", "../assets/img/icons/C%23-Icon.png");
+//                 $(this).attr("src", "../assets/img/icons/Python-Icon-Clicked.png");
+
+//                 displaySkill(id);
+//             break;
+//         }
+//     });
+//   });
 
 // Display the skill details depending on the language button clicked
 function displaySkill(language){
