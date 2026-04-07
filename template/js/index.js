@@ -1,77 +1,53 @@
-console.log("JS is running");
-// Hover functions for the social media icons
-$(document).ready(function() {
-    var src;
-    
-    $(".media-icons").hover(function() {
-        src = $(this).attr("src");
-        id = $(this).attr("id");
+// Click and hover functions for the social media icons
 
-        if(id === "facebook-icon"){
-            $(this).attr("src", "../assets/img/icons/Facebook-Icon.png");
+const icons = document.querySelectorAll(".media-icons");
 
-        }else if(id === "tiktok-icon"){
-            $(this).attr("src", "../assets/img/icons/Tiktok-Icon.png");
+const iconData = {
+    "facebook-icon": {
+        hover : "../assets/img/icons/Facebook-Icon.png",
+        default : "../assets/img/icons/Facebook-Icon-Green.png",
+        link : "https://www.facebook.com/Lotlot.Navea"
+    },
+    "tiktok-icon": {
+        hover : "../assets/img/icons/Tiktok-Icon.png",
+        default : "../assets/img/icons/Tiktok-Icon-Green.png",
+        link : "https://www.tiktok.com/@iamlotlot"
+    },
+    "instagram-icon": {
+        hover : "../assets/img/icons/Instagram-Icon.png",
+        default : "../assets/img/icons/Instagram-Icon-Green.png",
+        link : "https://www.instagram.com/jcnaveaaa/"
+    },
+    "twitter-icon": {
+        hover : "../assets/img/icons/Twitter-Icon.png",
+        default : "../assets/img/icons/Twitter-Icon-Green.png",
+        link : "https://twitter.com/Iam_Lotlot"
+    },
+    "github-icon": {
+        hover : "../assets/img/icons/Github-Icon.png",
+        default : "../assets/img/icons/Github-Icon-Green.png",
+        link : "https://github.com/IamLotlot"
+    }
+};
 
-        }else if(id === "instagram-icon"){
-            $(this).attr("src", "../assets/img/icons/Instagram-Icon.png");
-
-        }else if(id === "twitter-icon"){
-            $(this).attr("src", "../assets/img/icons/Twitter-Icon.png");
-
-        }else if(id === "github-icon"){
-            $(this).attr("src", "../assets/img/icons/Github-Icon.png");
-        }
-    }, function() {
-        $(this).attr("src", src);
+icons.forEach(icon => {
+    const id = icon.id;
+    // Hover in
+    icon.addEventListener("mouseenter", () => {
+        icon.src = iconData[id].hover;
     });
-  });
-
-// Click functions for the social media icons
-$(document).ready(function() {
-    $(".media-icons").click(function() {
-        id = $(this).attr("id");
-        
-        if(id === "facebook-icon"){
-            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://www.facebook.com/Lotlot.Navea)");
-
-            if(confirmed){
-                window.location.href = "https://www.facebook.com/Lotlot.Navea";
-
-            }
-        }else if(id === "tiktok-icon"){
-            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://www.tiktok.com/@iamlotlot)");
-
-            if(confirmed){
-                window.location.href = "https://www.tiktok.com/@iamlotlot";
-
-            }
-
-        }else if(id === "instagram-icon"){
-            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://www.instagram.com/jcnaveaaa/)");
-
-            if(confirmed){
-                window.location.href = "https://www.instagram.com/jcnaveaaa/";
-
-            }
-
-        }else if(id === "twitter-icon"){
-            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://twitter.com/Iam_Lotlot)");
-
-            if(confirmed){
-                window.location.href = "https://twitter.com/Iam_Lotlot";
-
-            }
-        }else if(id === "github-icon"){
-            var confirmed = confirm("Are you sure you want to be redirect to this link? (https://github.com/IamLotlot)");
-
-            if(confirmed){
-                window.location.href = "https://github.com/IamLotlot";
-
-            }
+    // Hover out
+    icon.addEventListener("mouseleave", () => {
+        icon.src = iconData[id].default;
+    });
+    // Click
+    icon.addEventListener("click", () => {
+        const confirmed = confirm(`Go to ${iconData[id].link}?`);
+        if (confirmed){
+            window.location.href = iconData[id].link;
         }
     });
-  });
+});
 
 // Hover function for projects
 $(document).ready(function() {
@@ -267,40 +243,6 @@ function displaySkill(language){
 }
 
 // Function for the web, pixel and app button on My Projects
-
-// $(document).ready(function() {
-//     $("#web-btn").click(function() {
-        
-//         $("#web-btn").css("color", "#72EF36");
-//         $("#pixel-btn").css("color", "#A6A6A6");
-//         $("#app-btn").css("color", "#A6A6A6");
-
-//         $("#web-projects").fadeIn();
-//         $("#pixel-projects").hide();
-//         $("#app-projects").hide();
-//     })
-
-//     $("#pixel-btn").click(function() {
-//         $("#web-btn").css("color", "#A6A6A6");
-//         $("#pixel-btn").css("color", "#72EF36");
-//         $("#app-btn").css("color", "#A6A6A6");
-
-//         $("#web-projects").hide();
-//         $("#pixel-projects").fadeIn();;
-//         $("#app-projects").hide();
-//     })
-
-//     $("#app-btn").click(function() {
-//         $("#web-btn").css("color", "#A6A6A6");
-//         $("#pixel-btn").css("color", "#A6A6A6");
-//         $("#app-btn").css("color", "#72EF36");
-
-//         $("#web-projects").hide();
-//         $("#pixel-projects").hide();
-//         $("#app-projects").fadeIn();;
-//     })
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".project-btn");
   const sections = document.querySelectorAll(".projects-list");
@@ -308,10 +250,10 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.forEach(button => {
   button.addEventListener("click", () => {
     const target = button.id.replace("-btn", "-projects");
-
+    //Color effect on click
     buttons.forEach(btn => btn.classList.remove("active-btn"));
     button.classList.add("active-btn");
-
+    //Show/hide effect on click
     sections.forEach(sec => sec.classList.add("hidden"));
     document.getElementById(target).classList.remove("hidden");
   });
