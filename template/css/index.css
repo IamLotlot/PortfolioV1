@@ -176,11 +176,6 @@ nav ul li a{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    padding: 5rem 0; */
 
     /* animation base */
     opacity: 1;
@@ -377,6 +372,12 @@ nav ul li a{
 }
 #skill-story{
     font-size: 1.3rem;
+}
+.active-skill{
+    display: flex !important;
+}
+.active-details{
+    display: block !important;
 }
 #fifth-section{
     margin-top: 10rem;
