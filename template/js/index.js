@@ -1,7 +1,3 @@
-// Global variables
-const mediaIcons = document.querySelectorAll(".media-icons");
-const languageIcons = document.querySelectorAll(".language-buttons");
-
 // Click and hover functions for the SOCIAL MEDIA icons
 
 const mediaData = {
@@ -31,6 +27,8 @@ const mediaData = {
         link : "https://github.com/IamLotlot"
     }
 };
+
+const mediaIcons = document.querySelectorAll(".media-icons");
 
 mediaIcons.forEach(media => {
     const id = media.id;
@@ -122,10 +120,25 @@ const languageData = {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // SKILL Functions
+    const languageIcons = document.querySelectorAll(".language-buttons");
+
+    let activeSkill = null;
 
     languageIcons.forEach(language => {
         language.addEventListener("click", () => {
+
+            if (activeSkill === language.id) {
+                activeSkill = null;
+
+                hideSkills();
+
+                const lang = languageData[language.id];
+                if (lang) language.src = lang.default;
+
+                return;
+            }
+
+            activeSkill = language.id;
 
             languageIcons.forEach(lang => {
                 const data = languageData[lang.id];
@@ -137,15 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             language.src = skill.click;
 
-            document.getElementById("skill-image").src = skill.image;
-            document.getElementById("skill-language").textContent = skill.name;
-            document.getElementById("skill-experience").textContent = skill.experience;
-            document.getElementById("skill-story").textContent = skill.story;
-
-            document.getElementById("skill-details").style.backgroundImage = "url(../assets/img/icons/Monitor-On.png)";
-            document.getElementById("skill-image").classList.add("active-skill");
-            document.getElementById("details-container").classList.add("active-details");
-
+            renderSkills(skill);
         });
     });
 
@@ -166,3 +171,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// ------------------------- Functions -------------------------- //
+
+function renderSkills(skill){
+    document.getElementById("skill-image").src = skill.image;
+    document.getElementById("skill-language").textContent = skill.name;
+    document.getElementById("skill-experience").textContent = skill.experience;
+    document.getElementById("skill-story").textContent = skill.story;
+
+    document.getElementById("skill-details").style.backgroundImage = "url(../assets/img/icons/Monitor-On.png)";
+    document.getElementById("skill-image").classList.add("active-skill");
+    document.getElementById("details-container").classList.add("active-details");
+}
+
+function hideSkills(){
+    document.getElementById("skill-details").style.backgroundImage = "url(../assets/img/icons/Monitor-Off.gif)";
+    document.getElementById("skill-image").classList.remove("active-skill");
+    document.getElementById("details-container").classList.remove("active-details");
+}
