@@ -28,26 +28,28 @@ const mediaData = {
     }
 };
 
-const mediaIcons = document.querySelectorAll(".media-icons");
+document.addEventListener("DOMContentLoaded", () => {
+    const mediaIcons = document.querySelectorAll(".media-icons");
 
-mediaIcons.forEach(media => {
-    const id = media.id;
-    // Hover in
-    media.addEventListener("mouseenter", () => {
-        media.src = mediaData[id].hover;
+    mediaIcons.forEach(media => {
+        const id = media.id;
+        // Hover in
+        media.addEventListener("mouseenter", () => {
+            media.src = mediaData[id].hover;
+        });
+        // Hover out
+        media.addEventListener("mouseleave", () => {
+            media.src = mediaData[id].default;
+        });
+        // Click
+        media.addEventListener("click", () => {
+            const confirmed = confirm(`Go to ${mediaData[id].link}?`);
+            if (confirmed){
+                window.location.href = mediaData[id].link;
+            }
+        });
     });
-    // Hover out
-    media.addEventListener("mouseleave", () => {
-        media.src = mediaData[id].default;
-    });
-    // Click
-    media.addEventListener("click", () => {
-        const confirmed = confirm(`Go to ${mediaData[id].link}?`);
-        if (confirmed){
-            window.location.href = mediaData[id].link;
-        }
-    });
-});
+})
 
 // Click function for the SKILLS button
 
@@ -129,28 +131,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (activeSkill === language.id) {
                 activeSkill = null;
-
-                hideSkills();
-
-                const lang = languageData[language.id];
-                if (lang) language.src = lang.default;
-
+                resetIcons(languageIcons);
+                hideSkillDetails();
                 return;
             }
 
             activeSkill = language.id;
 
-            languageIcons.forEach(lang => {
-                const data = languageData[lang.id];
-                if (data) lang.src = data.default;
-            });
+            resetIcons(languageIcons);
 
             const skill = languageData[language.id];
+
             if (!skill) return;
-
-            language.src = skill.click;
-
-            renderSkills(skill);
+            
+            setActiveIcons(language, skill)
+            updateSkillUI(skill);
         });
     });
 
@@ -174,7 +169,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ------------------------- Functions -------------------------- //
 
-function renderSkills(skill){
+function resetIcons(languageIcons) {
+    languageIcons.forEach(lang => {
+        const data = languageData[lang.id];
+        if (data) lang.src = data.default;
+    });
+}
+
+function setActiveIcons(language, skill){
+    language.src = skill.click;
+}
+
+function updateSkillUI(skill){
     document.getElementById("skill-image").src = skill.image;
     document.getElementById("skill-language").textContent = skill.name;
     document.getElementById("skill-experience").textContent = skill.experience;
@@ -185,7 +191,7 @@ function renderSkills(skill){
     document.getElementById("details-container").classList.add("active-details");
 }
 
-function hideSkills(){
+function hideSkillDetails(){
     document.getElementById("skill-details").style.backgroundImage = "url(../assets/img/icons/Monitor-Off.gif)";
     document.getElementById("skill-image").classList.remove("active-skill");
     document.getElementById("details-container").classList.remove("active-details");
