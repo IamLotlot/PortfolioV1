@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const skill = languageData[language.id];
 
             if (!skill) return;
-            
+
             setActiveIcons(language, skill)
             updateSkillUI(skill);
         });
@@ -162,6 +162,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             sections.forEach(sec => sec.classList.add("hidden"));
             document.getElementById(target).classList.remove("hidden");
+        });
+    });
+
+    const certificateImages = document.querySelectorAll(".certificate-images");
+    const activeContainer = document.getElementById("active-image-container");
+
+    certificateImages.forEach(image => {
+        image.addEventListener("click", () => {
+
+            activeSkill = image.id;
+            showActiveImage(image);
+
+            activeContainer.addEventListener("click", () => {
+
+                hideActiveImage();
+            });
         });
     });
 
@@ -195,4 +211,16 @@ function hideSkillDetails(){
     document.getElementById("skill-details").style.backgroundImage = "url(../assets/img/icons/Monitor-Off.gif)";
     document.getElementById("skill-image").classList.remove("active-skill");
     document.getElementById("details-container").classList.remove("active-details");
+}
+
+function showActiveImage(image){
+    document.getElementById("active-image").src = image.src;
+    document.getElementById("active-image-container").classList.add("display-active-image");
+    document.body.classList.add("modal-open");
+}
+
+function hideActiveImage(){
+    document.getElementById("active-image").src = "";
+    document.getElementById("active-image-container").classList.remove("display-active-image");
+    document.body.classList.remove("modal-open");
 }
