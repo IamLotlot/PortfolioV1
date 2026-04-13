@@ -152,9 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Functions for the PROJECT buttons
     const buttons = document.querySelectorAll(".project-btn");
     const sections = document.querySelectorAll(".projects-list");
+    const projects = document.querySelectorAll(".projects");
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
+
             const target = button.id.replace("-btn", "-projects");
 
             buttons.forEach(btn => btn.classList.remove("active-btn"));
@@ -164,6 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById(target).classList.remove("hidden");
         });
     });
+
+    // projects.forEach(project => {
+    //     project.addEventListener("mouseenter", () => {
+    //         project.classList.add("show-projects-details");
+    //     });
+    //     project.addEventListener("mouseleave", () => {
+    //         project.classList.remove("show-projects-details");
+    //     });
+    // });
 
     const certificateImages = document.querySelectorAll(".certificate-images");
     const activeContainer = document.getElementById("active-image-container");

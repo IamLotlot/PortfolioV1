@@ -234,7 +234,7 @@ nav ul li a{
     position: absolute;
 }
 .projects:hover:before {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 .projects:hover {
     transition: 0.3s;
@@ -243,13 +243,9 @@ nav ul li a{
 .projects h3, 
 .projects h4, 
 .projects h5{
-    z-index: 2;
     margin-bottom: 0.5rem;
     padding: 0 1rem 0 1rem;
     color: #F0ECE6;
-    display: none;
-    /* align-items: center;
-    justify-content: center; */
 }
 .projects h3{
     font-size: 3rem;
@@ -260,6 +256,19 @@ nav ul li a{
 .projects h5{
     margin-top: 3rem;
     font-size: 1rem;
+}
+.projects-container{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    transition: opacity 0.3s ease;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projects:hover .projects-container{
+    display: flex;
 }
 /* Webs */
 #project-web-one{
