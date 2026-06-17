@@ -172,10 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         project.addEventListener("click", () => {
 
             const project_id = project.id;
-            const confirmed = confirm(`Go to "overview.html?id=`+project_id);
-            if (confirmed){
-                window.location.href = "overview.html?id="+project_id;
-            }
+            window.location.href = "overview.html?id="+project_id;
         });
     });
     // projects.forEach(project => {
