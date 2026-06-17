@@ -167,6 +167,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Functions when the PROJECT is clicked or redirection
+    projects.forEach(project => {
+        project.addEventListener("click", () => {
+
+            const project_id = project.id;
+            const confirmed = confirm(`Go to "overview.html?id=`+project_id);
+            if (confirmed){
+                window.location.href = "overview.html?id="+project_id;
+            }
+        });
+    });
     // projects.forEach(project => {
     //     project.addEventListener("mouseenter", () => {
     //         project.classList.add("show-projects-details");
