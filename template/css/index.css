@@ -327,6 +327,26 @@ nav ul li a{
     width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
 }
+#project-pixel-eleven{
+    width: 20rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Ice-King.png");
+}
+#project-pixel-twelve{
+    width: 12rem;
+    background-image: url("../../assets/img/thumbnails/pixel/The-Trio.png");
+}
+#project-pixel-thirteen{
+    width: 35rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Adventure-Time-Wallpaper.png");
+}
+#project-pixel-fourteen{
+    width: 20rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Food-Processing-Equipments.png");
+}
+/* #project-pixel-fifteen{
+    width: 20rem;
+    background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
+} */
 /* Applications */
 #project-app-one{
     background-image: url("../../assets/img/thumbnails/app/TSBS.png");
