@@ -6,7 +6,7 @@ const projectDetails = {
         banner : "../assets/img/thumbnails/web/StudyBuddy.png",
         about : "Study Buddy is a thesis-based web application designed to help students find study partners and collaborate more effectively on specific subjects. The platform allows users to filter and match with other students based on shared academic needs, such as finding a partner for Mathematics or other subjects. It also includes a secure authentication system with enhanced account verification features, including face capture for identity validation and OTP (one-time password) verification via SMS to strengthen account security. These added layers of protection ensure that user accounts are authentic and reduce the risk of fake profiles within the system. In addition to its matching system, users can share and access study notes through a built-in content marketplace. Students are able to upload notes for others to view or purchase using a custom in-platform currency, which can also be earned when submitted content is approved by moderators. Notes can also be shared directly with other students, encouraging collaboration and knowledge exchange. The system further includes features such as real-time chat, a notepad tool, and standard account management functions like login and registration. This project was developed using HTML, CSS, JavaScript, PHP, and MySQL, with PayPal API integration for subscription payments. As the sole programmer, I was responsible for the full development of the system, which significantly improved my skills in full-stack development, security implementation, and third-party API integration.",
         setting : ["School Project", "November 20, 2023", ""],
-        tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL", "Paypal API"],
+        tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL", "Paypal API", ""],
         tools : ["VS Code", "Aseprite", ""],
         gallery : ["", "", ""]
     },
@@ -215,12 +215,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Displaying the techs
+document.addEventListener("DOMContentLoaded", () => {
+    const techContainer = document.getElementById("tech-images");
+    const page = (new URLSearchParams(window.location.search)).get("id");
+    const id = page.slice(page.indexOf('-') + 1); // Remove the "project-" from the id
+    const projectType = page.slice(page.indexOf('-') + 1, page.lastIndexOf('-') + 0); // Remove all words and characters except the one between two '-'
+    console.log(id);
+    // If the project is not web or app it will remove the tech wrapper
+    if(projectType === "pixel"){
+        document.getElementById("tech-wrapper").style.display = "none";
+        
+    } else {
+        projectDetails[id].tech.forEach(tech => {
+            if(tech){
+                const techWrapper = document.createElement("div");
+                const techImage = document.createElement("img");
+                const techLabel = document.createElement("h3");
+                techContainer.appendChild(techWrapper);
+                techImage.src = "../assets/img/icons/"+tech+"-Icon-Clicked.png";
+                techWrapper.appendChild(techImage);// Place the new image element into techContainer which is the target parent
+                
+                techImage.onerror = function (){
+                    // techImage.src = "../assets/img/icons/Unknown-Image.png";
+                    techImage.style.display = "none";
+                }
+
+                techLabel.textContent = tech;
+                techWrapper.appendChild(techLabel);// Place the new h3 element into techContainer which is the target parent
+            }
+        });
+    }
+
+    // Displaying the tools
+    const toolsContainer = document.getElementById("tool-images");
+
+    projectDetails[id].tools.forEach(tool => {
+        if(tool){
+            const toolWrapper = document.createElement("div");
+            const toolImage = document.createElement("img");
+            const toolLabel = document.createElement("h3");
+            toolsContainer.appendChild(toolWrapper);
+            toolImage.src = "../assets/img/icons/"+tool+"-Icon-Clicked.png";
+            toolWrapper.appendChild(toolImage);// Place the new image element into toolContainer which is the target parent
+            
+            toolImage.onerror = function (){
+                // toolImage.src = "../assets/img/icons/Unknown-Image.png";
+                toolImage.style.display = "none";
+            }
+
+            toolLabel.textContent = tool;
+            toolWrapper.appendChild(toolLabel);// Place the new h3 element into toolContainer which is the target parent
+        }
+    });
+});
+
 // Function for going back to the home page
 document.addEventListener("DOMContentLoaded", () => {
     const homeWrapper = document.querySelector("#home-wrapper");
     
     homeWrapper.addEventListener("click", () => {
-        window.location.href = "index.html";
+        window.location.href = "index.html#third-section";
     });
 });
 
@@ -253,9 +308,7 @@ function updateDetails(result){
     document.getElementById("date-completed").textContent = result.setting[1];
     document.getElementById("canvas-size").textContent = result.setting[2];
 
-    if (result.setting[2] == ""){
+    if (result.setting[2] === ""){
         document.getElementById("setting-three").classList.add("hide-image");
-    } else {
-        console.log("Canvas Size Good");
     }
 }

@@ -92,6 +92,7 @@ nav #logo-container,#home-container{
     padding: 0 2rem 0 2rem 0;
     border-radius: 1rem;
     border: 0.5rem solid var(--black);
+    background-color: var(--black);
     /* background-color: var(--gray);
     display: flex;
     align-items: center;
@@ -186,20 +187,43 @@ nav #logo-container,#home-container{
 #tech-wrapper, #tool-wrapper{
     width: 48%;
     padding: 2rem 0 2rem 0;
-    border-radius: 1rem;
-    background-color: var(--black);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 #tech-container h2{
-    font-size: 2.5rem;
-    margin: 0 0 2rem 0;
-    color: var(--white);
+    width: 100%;
+    font-size: 3rem;
+    margin: 0 0 2rem 1rem;
+    font-family: VT323;
+    border-bottom: 0.5rem solid var(--green);
+    color: var(--black);
 }
 #tech-container .images{
-    min-height: 15rem;
     width: 95%;
-    background-color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+#tech-container .images div{
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--black);
+}
+#tech-container .images img{
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0.5rem 0 0;
+}
+#tech-container .images h3{
+    font-size: 1.5rem;
+    color: var(--green);
 }
