@@ -3,7 +3,7 @@ const projectDetails = {
     // WEB data storage
     "web-one": {
         header : ["Study Buddy", "Web App", "2023"],
-        banner : "../../assets/img/thumbnails/web/StudyBuddy.png",
+        banner : "/assets/img/thumbnails/web/StudyBuddy.png",
         about : "Study Buddy is a thesis-based web application designed to help students find study partners and collaborate more effectively on specific subjects. The platform allows users to filter and match with other students based on shared academic needs, such as finding a partner for Mathematics or other subjects. It also includes a secure authentication system with enhanced account verification features, including face capture for identity validation and OTP (one-time password) verification via SMS to strengthen account security. These added layers of protection ensure that user accounts are authentic and reduce the risk of fake profiles within the system. In addition to its matching system, users can share and access study notes through a built-in content marketplace. Students are able to upload notes for others to view or purchase using a custom in-platform currency, which can also be earned when submitted content is approved by moderators. Notes can also be shared directly with other students, encouraging collaboration and knowledge exchange. The system further includes features such as real-time chat, a notepad tool, and standard account management functions like login and registration. This project was developed using HTML, CSS, JavaScript, PHP, and MySQL, with PayPal API integration for subscription payments. As the sole programmer, I was responsible for the full development of the system, which significantly improved my skills in full-stack development, security implementation, and third-party API integration.",
         setting : ["School Project", "November 20, 2023", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL", "Paypal API"],
@@ -12,7 +12,7 @@ const projectDetails = {
     },
     "web-two": {
         header : ["Web Tool", "Web App", ""],
-        banner : "../../assets/img/thumbnails/web/WebTool.png",
+        banner : "/../assets/img/thumbnails/web/WebTool.png",
         about : "",
         setting : ["Personal Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "Javascript", "SQL"],
@@ -21,7 +21,7 @@ const projectDetails = {
     },
     "web-three": {
         header : ["Dental Clinic Management System", "Web App", "2023"],
-        banner : "../../assets/img/thumbnails/web/DCMS.png",
+        banner : "/../assets/img/thumbnails/web/DCMS.png",
         about : "DCMS (Dental Clinic Management System) is a web-based appointment and scheduling system designed to help a dental clinic manage patient bookings more efficiently. The platform allows customers to view available and unavailable dates and time slots in real time, making it easier to schedule appointments without conflicts. Its main feature is an interactive 2D dental chart where users can select one or multiple teeth depending on their concern, and the system automatically identifies and labels the selected teeth to improve communication between the patient and the clinic. The system was built to simplify appointment handling while improving accuracy in identifying dental issues prior to consultation. By combining scheduling functionality with a visual tooth-selection interface, DCMS provides a more intuitive and user-friendly experience for both patients and clinic staff. This project strengthened my understanding of interactive UI development and practical system design focused on real-world use cases in healthcare management.",
         setting : ["School Project", "June 6, 2023", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
@@ -30,7 +30,7 @@ const projectDetails = {
     },
     "web-four": {
         header : ["Coffee Scape", "Web App", ""],
-        banner : "../../assets/img/thumbnails/web/CoffeeScape.png",
+        banner : "../assets/img/thumbnails/web/CoffeeScape.png",
         about : "Coffee-Scape is a web-based inventory and billing system designed for a restaurant environment, focusing on streamlining menu management and customer ordering. The application includes essential account features such as login, registration, and user account management. Its core functionality revolves around an interactive menu system where available products can be managed by the administrator, allowing items to be added, updated, or removed based on availability. Customers can browse the menu, add multiple items to a cart, and proceed through a confirmation step to ensure that their selected orders are correct before finalizing. In addition to its ordering system, Coffee-Scape includes a cart validation process that helps ensure order accuracy before checkout. It also features a “Most Selling Products” section displayed with a vertical auto-scrolling animation, creating a dynamic and engaging way to showcase popular items based on sales data. Another key feature is its integrated Google Maps functionality, which provides users with directions from their current location to the restaurant, improving accessibility and convenience. This project enhanced my experience in building practical inventory and ordering systems, particularly in handling data-driven features, UI animations, cart logic, and API integration.",
         setting : ["School Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
@@ -39,7 +39,7 @@ const projectDetails = {
     },
     "web-five": {
         header : ["Traba Hanap", "Web App", ""],
-        banner : "../../assets/img/thumbnails/web/TrabaHanap.png",
+        banner : "/assets/img/thumbnails/web/TrabaHanap.png",
         about : "TrabaHanap is a local job-searching web application designed to connect users with small and short-term job opportunities within their community. The platform allows employers to post job listings, while job seekers can quickly browse and apply for available positions. To ensure safety and legitimacy, job postings require proper documentation, which is reviewed and authenticated by moderators before being approved. This verification system helps maintain trust and reduces fraudulent job postings on the platform. For job seekers, TrabaHanap offers a fast application process where users can directly apply to jobs and initiate communication with employers once a listing is selected. The system also includes standard account features such as login, registration, and account management, along with a dedicated section that tracks all jobs a user has applied for. This project helped strengthen my understanding of building secure user-driven platforms, particularly in implementing moderation workflows, application tracking systems, and role-based interactions between users and employers.",
         setting : ["School Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
