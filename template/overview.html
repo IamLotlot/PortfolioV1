@@ -6,6 +6,7 @@
 	<link rel="icon" type="image/x-icon" href="../assets/img/icons/Lotlot-Symbol.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/overview.css">
+    <link rel="stylesheet" href="css/active-image.css">
     <title>Overview</title>
   </head>
   <body>
@@ -55,8 +56,8 @@
                 <div class="settings-wrapper" id="setting-three">
                     <img src="../assets/img/icons/Facebook-Icon-Green.png" alt="">
                     <div class="setting-label">
-                        <h3>Canvas Size</h3>
-                        <h3 id="canvas-size"></h3>
+                        <h3 class="setting-labels" id="canvas-label">Canvas Size</h3>
+                        <h3 class="setting-labels" id="canvas-size"></h3>
                     </div>
                 </div>
             </div>
@@ -78,5 +79,10 @@
         </div>
     </section>
     <script src="js/overview.js"></script>
+    <script src="js/active-image.js"></script>
   </body>
+    <div id="active-image-container">
+        <img src="" alt="Active Image" id="active-image">
+        <span id="close-btn">Click anywhere to close</span>
+    </div>
 </html>

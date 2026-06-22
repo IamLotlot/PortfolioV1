@@ -157,6 +157,14 @@ nav #logo-container,#home-container{
     align-items: start;
     justify-content: center;
 }
+#setting-three.hide-image{
+    display: none;
+    animation: fadeIn 0.2s ease;
+}
+#canvas-label.hide-image, #canvas-size.hide-image{
+    display: none;
+    animation: fadeIn 0.2s ease;
+}
 .settings-wrapper img{
     width: 4rem;
     margin: 0 0.5rem 0 0;

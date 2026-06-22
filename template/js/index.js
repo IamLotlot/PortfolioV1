@@ -175,14 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "overview.html?id="+project_id;
         });
     });
-    // projects.forEach(project => {
-    //     project.addEventListener("mouseenter", () => {
-    //         project.classList.add("show-projects-details");
-    //     });
-    //     project.addEventListener("mouseleave", () => {
-    //         project.classList.remove("show-projects-details");
-    //     });
-    // });
 
     const certificateImages = document.querySelectorAll(".certificate-images");
     const activeContainer = document.getElementById("active-image-container");
@@ -230,16 +222,4 @@ function hideSkillDetails(){
     document.getElementById("skill-details").style.backgroundImage = "url(../assets/img/icons/Monitor-Off.gif)";
     document.getElementById("skill-image").classList.remove("active-skill");
     document.getElementById("details-container").classList.remove("active-details");
-}
-
-function showActiveImage(image){
-    document.getElementById("active-image").src = image.src;
-    document.getElementById("active-image-container").classList.add("display-active-image");
-    document.body.classList.add("modal-open");
-}
-
-function hideActiveImage(){
-    document.getElementById("active-image").src = "";
-    document.getElementById("active-image-container").classList.remove("display-active-image");
-    document.body.classList.remove("modal-open");
 }

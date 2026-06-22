@@ -11,7 +11,7 @@ const projectDetails = {
         gallery : ["", "", ""]
     },
     "web-two": {
-        header : ["Web Tool", "Web App", ""],
+        header : ["Web Tool", "Web App", "2025"],
         banner : "../assets/img/thumbnails/web/WebTool.png",
         about : "",
         setting : ["Personal Project", "", ""],
@@ -29,7 +29,7 @@ const projectDetails = {
         gallery : ["", "", ""]
     },
     "web-four": {
-        header : ["Coffee Scape", "Web App", ""],
+        header : ["Coffee Scape", "Web App", "2023"],
         banner : "../assets/img/thumbnails/web/CoffeeScape.png",
         about : "Coffee-Scape is a web-based inventory and billing system designed for a restaurant environment, focusing on streamlining menu management and customer ordering. The application includes essential account features such as login, registration, and user account management. Its core functionality revolves around an interactive menu system where available products can be managed by the administrator, allowing items to be added, updated, or removed based on availability. Customers can browse the menu, add multiple items to a cart, and proceed through a confirmation step to ensure that their selected orders are correct before finalizing. In addition to its ordering system, Coffee-Scape includes a cart validation process that helps ensure order accuracy before checkout. It also features a “Most Selling Products” section displayed with a vertical auto-scrolling animation, creating a dynamic and engaging way to showcase popular items based on sales data. Another key feature is its integrated Google Maps functionality, which provides users with directions from their current location to the restaurant, improving accessibility and convenience. This project enhanced my experience in building practical inventory and ordering systems, particularly in handling data-driven features, UI animations, cart logic, and API integration.",
         setting : ["School Project", "", ""],
@@ -38,7 +38,7 @@ const projectDetails = {
         gallery : ["", "", ""]
     },
     "web-five": {
-        header : ["Traba Hanap", "Web App", ""],
+        header : ["Traba Hanap", "Web App", "2023"],
         banner : "/assets/img/thumbnails/web/TrabaHanap.png",
         about : "TrabaHanap is a local job-searching web application designed to connect users with small and short-term job opportunities within their community. The platform allows employers to post job listings, while job seekers can quickly browse and apply for available positions. To ensure safety and legitimacy, job postings require proper documentation, which is reviewed and authenticated by moderators before being approved. This verification system helps maintain trust and reduces fraudulent job postings on the platform. For job seekers, TrabaHanap offers a fast application process where users can directly apply to jobs and initiate communication with employers once a listing is selected. The system also includes standard account features such as login, registration, and account management, along with a dedicated section that tracks all jobs a user has applied for. This project helped strengthen my understanding of building secure user-driven platforms, particularly in implementing moderation workflows, application tracking systems, and role-based interactions between users and employers.",
         setting : ["School Project", "", ""],
@@ -224,6 +224,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Function for image viewer
+document.addEventListener("DOMContentLoaded", () => {
+    const bannerImages = document.getElementById("project-banner");
+    const activeContainer = document.getElementById("active-image-container");
+
+    bannerImages.addEventListener("click", () => {
+
+        activeSkill = bannerImages.id;
+        showActiveImage(bannerImages);
+
+        activeContainer.addEventListener("click", () => {
+
+            hideActiveImage();
+        });
+    });
+});
+
 // ------------------------- Functions -------------------------- //
 
 function updateDetails(result){
@@ -235,4 +252,10 @@ function updateDetails(result){
     document.getElementById("project-reason").textContent = result.setting[0];
     document.getElementById("date-completed").textContent = result.setting[1];
     document.getElementById("canvas-size").textContent = result.setting[2];
+
+    if (result.setting[2] == ""){
+        document.getElementById("setting-three").classList.add("hide-image");
+    } else {
+        console.log("Canvas Size Good");
+    }
 }
