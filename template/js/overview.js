@@ -221,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const page = (new URLSearchParams(window.location.search)).get("id");
     const id = page.slice(page.indexOf('-') + 1); // Remove the "project-" from the id
     const projectType = page.slice(page.indexOf('-') + 1, page.lastIndexOf('-') + 0); // Remove all words and characters except the one between two '-'
-    console.log(id);
     // If the project is not web or app it will remove the tech wrapper
     if(projectType === "pixel"){
         document.getElementById("tech-wrapper").style.display = "none";
@@ -233,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const techImage = document.createElement("img");
                 const techLabel = document.createElement("h3");
                 techContainer.appendChild(techWrapper);
-                techImage.src = "../assets/img/icons/"+tech+"-Icon-Clicked.png";
+                techImage.src = "../assets/img/icons/"+tech.split(/\s+/)[0]+"-Logo-Green.png";
                 techWrapper.appendChild(techImage);// Place the new image element into techContainer which is the target parent
                 
                 techImage.onerror = function (){
@@ -256,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const toolImage = document.createElement("img");
             const toolLabel = document.createElement("h3");
             toolsContainer.appendChild(toolWrapper);
-            toolImage.src = "../assets/img/icons/"+tool+"-Icon-Clicked.png";
+            toolImage.src = "../assets/img/icons/"+tool.split(/\s+/)[0]+"-Logo-Green.png";
             toolWrapper.appendChild(toolImage);// Place the new image element into toolContainer which is the target parent
             
             toolImage.onerror = function (){
