@@ -8,7 +8,7 @@ const projectDetails = {
         setting : ["School Project", "November 20, 2023", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL", "Paypal API", ""],
         tools : ["VS Code", "Aseprite", ""],
-        gallery : ["", "", ""]
+        gallery : ["studybuddy1.png", "studybuddy2.png", "studybuddy3.png", "studybuddy4.png", "studybuddy5.png", "studybuddy6.png", "studybuddy7.png", "studybuddy8.png", "studybuddy9.png", "studybuddy10.png", "studybuddy11.png", "studybuddy12.png", "studybuddy13.png"]
     },
     "web-two": {
         header : ["Web Tool", "Web App", "2025"],
@@ -26,7 +26,7 @@ const projectDetails = {
         setting : ["School Project", "June 6, 2023", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
         tools : ["VS Code", "Canva", ""],
-        gallery : ["", "", ""]
+        gallery : ["dcms1.png", "dcms2.png", "dcms3.png", "dcms4.png", "dcms5.png", "dcms6.png"]
     },
     "web-four": {
         header : ["Coffee Scape", "Web App", "2023"],
@@ -35,7 +35,7 @@ const projectDetails = {
         setting : ["School Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
         tools : ["VS Code", "Gimp", ""],
-        gallery : ["", "", ""]
+        gallery : ["coffeescape.png1", "coffeescape.png2", "coffeescape.png3", "coffeescape.png4"]
     },
     "web-five": {
         header : ["Traba Hanap", "Web App", "2023"],
@@ -204,6 +204,32 @@ const projectDetails = {
     }
 }
 
+// Function for going back to the home page
+document.addEventListener("DOMContentLoaded", () => {
+    const homeWrapper = document.querySelector("#home-wrapper");
+    
+    homeWrapper.addEventListener("click", () => {
+        window.location.href = "index.html#third-section";
+    });
+});
+
+// Function for image viewer
+document.addEventListener("DOMContentLoaded", () => {
+    const bannerImages = document.getElementById("project-banner");
+    const activeContainer = document.getElementById("active-image-container");
+
+    bannerImages.addEventListener("click", () => {
+
+        activeSkill = bannerImages.id;
+        showActiveImage(bannerImages);
+
+        activeContainer.addEventListener("click", () => {
+
+            hideActiveImage();
+        });
+    });
+});
+
 // Function when the load pages the description of the project will be displayed
 document.addEventListener("DOMContentLoaded", () => {
     const page = (new URLSearchParams(window.location.search)).get("id");
@@ -267,32 +293,24 @@ document.addEventListener("DOMContentLoaded", () => {
             toolWrapper.appendChild(toolLabel);// Place the new h3 element into toolContainer which is the target parent
         }
     });
-});
 
-// Function for going back to the home page
-document.addEventListener("DOMContentLoaded", () => {
-    const homeWrapper = document.querySelector("#home-wrapper");
-    
-    homeWrapper.addEventListener("click", () => {
-        window.location.href = "index.html#third-section";
-    });
-});
+    // Displaying the gallery
+    const galleryContainer = document.getElementById("gallery-wrapper");
+    const imageIndex = 0;
+    console.log(projectDetails[id].gallery);
 
-// Function for image viewer
-document.addEventListener("DOMContentLoaded", () => {
-    const bannerImages = document.getElementById("project-banner");
-    const activeContainer = document.getElementById("active-image-container");
-
-    bannerImages.addEventListener("click", () => {
-
-        activeSkill = bannerImages.id;
-        showActiveImage(bannerImages);
-
-        activeContainer.addEventListener("click", () => {
-
-            hideActiveImage();
+    if(projectType !== "pixel"){
+        projectDetails[id].gallery.slice(imageIndex, imageIndex+3).forEach(image => {
+            if(image){
+                const galleryImage = document.createElement("img"); 
+                galleryImage.src = "../assets/img/gallery/"+image.replace(/\d+/,"").replace(".png","")+"/"+image;
+                galleryContainer.appendChild(galleryImage);
+            }
         });
-    });
+
+    } else {
+        document.getElementById("gallery-section").style.display = "none";
+    }
 });
 
 // ------------------------- Functions -------------------------- //
