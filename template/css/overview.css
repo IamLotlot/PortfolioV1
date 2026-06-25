@@ -234,9 +234,33 @@ nav #logo-container,#home-container{
     font-family: VT323;
 }
 #gallery-wrapper{
-    border: 1px solid red;
     min-height: 20rem;
+    display: flex;
+    flex-direction: row;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
 #gallery-wrapper img{
-    height: 15rem;
+    height: 20rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+#button-container{
+    margin: 1rem 0 0 0;
+    border-top: 0.5rem solid var(--green);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-buttons{
+    font-size: 1.5rem;
+    margin: 0 2rem 0 2rem;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    background-color: var(--black);
+    color: var(--green);
+    cursor: pointer;
 }

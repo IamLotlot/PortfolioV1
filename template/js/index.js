@@ -182,8 +182,8 @@ document.addEventListener("DOMContentLoaded", () => {
     certificateImages.forEach(image => {
         image.addEventListener("click", () => {
 
-            activeSkill = image.id;
-            showActiveImage(image);
+            // activeSkill = image.id;
+            showActiveImage(image.src);
 
             activeContainer.addEventListener("click", () => {
 

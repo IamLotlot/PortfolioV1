@@ -31,11 +31,11 @@ const projectDetails = {
     "web-four": {
         header : ["Coffee Scape", "Web App", "2023"],
         banner : "../assets/img/thumbnails/web/CoffeeScape.png",
-        about : "Coffee-Scape is a web-based inventory and billing system designed for a restaurant environment, focusing on streamlining menu management and customer ordering. The application includes essential account features such as login, registration, and user account management. Its core functionality revolves around an interactive menu system where available products can be managed by the administrator, allowing items to be added, updated, or removed based on availability. Customers can browse the menu, add multiple items to a cart, and proceed through a confirmation step to ensure that their selected orders are correct before finalizing. In addition to its ordering system, Coffee-Scape includes a cart validation process that helps ensure order accuracy before checkout. It also features a “Most Selling Products” section displayed with a vertical auto-scrolling animation, creating a dynamic and engaging way to showcase popular items based on sales data. Another key feature is its integrated Google Maps functionality, which provides users with directions from their current location to the restaurant, improving accessibility and convenience. This project enhanced my experience in building practical inventory and ordering systems, particularly in handling data-driven features, UI animations, cart logic, and API integration.",
+        about : "Coffee-Scape is a web-based inventory and billing system designed for a restaurant environment, focusing on streamlining menu management and customer ordering. The application includes essential account features such as login, registration, and user account management. Its core functionality revolves around an interactive menu system where available products can be managed by the administrator, allowing items to be added, updated, or removed based on availability. Customers can browse the menu, use a built-in search function to quickly find specific products, add multiple items to a cart, and proceed through a confirmation step to ensure that their selected orders are correct before finalizing. In addition to its ordering system, Coffee-Scape includes a cart validation process that helps ensure order accuracy before checkout. It also features a “Most Selling Products” section displayed with a vertical auto-scrolling animation, creating a dynamic and engaging way to showcase popular items based on sales data. Another key feature is its integrated Google Maps functionality, which provides users with directions from their current location to the restaurant, improving accessibility and convenience. This project enhanced my experience in building practical inventory and ordering systems, particularly in handling data-driven features, search functionality, UI animations, cart logic, and API integration.",
         setting : ["School Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
         tools : ["VS Code", "Gimp", ""],
-        gallery : ["coffeescape.png1", "coffeescape.png2", "coffeescape.png3", "coffeescape.png4"]
+        gallery : ["coffeescape1.png", "coffeescape2.png", "coffeescape3.png", "coffeescape4.png"]
     },
     "web-five": {
         header : ["Traba Hanap", "Web App", "2023"],
@@ -213,23 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Function for image viewer
-document.addEventListener("DOMContentLoaded", () => {
-    const bannerImages = document.getElementById("project-banner");
-    const activeContainer = document.getElementById("active-image-container");
-
-    bannerImages.addEventListener("click", () => {
-
-        activeSkill = bannerImages.id;
-        showActiveImage(bannerImages);
-
-        activeContainer.addEventListener("click", () => {
-
-            hideActiveImage();
-        });
-    });
-});
-
 // Function when the load pages the description of the project will be displayed
 document.addEventListener("DOMContentLoaded", () => {
     const page = (new URLSearchParams(window.location.search)).get("id");
@@ -296,24 +279,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Displaying the gallery
     const galleryContainer = document.getElementById("gallery-wrapper");
-    const imageIndex = 0;
-    console.log(projectDetails[id].gallery);
+    let imageIndex = 0;
+    const gallery = projectDetails[id].gallery;
+    const previousButton = document.getElementById("previous-button");
+    const nextButton = document.getElementById("next-button");
+    const viewableImages = document.querySelectorAll(".viewable-image");
 
     if(projectType !== "pixel"){
-        projectDetails[id].gallery.slice(imageIndex, imageIndex+3).forEach(image => {
-            if(image){
-                const galleryImage = document.createElement("img"); 
-                galleryImage.src = "../assets/img/gallery/"+image.replace(/\d+/,"").replace(".png","")+"/"+image;
-                galleryContainer.appendChild(galleryImage);
-            }
-        });
-
+            refreshGallery(
+                gallery, 
+                imageIndex, 
+                galleryContainer, 
+                previousButton, 
+                nextButton, viewableImages)
     } else {
         document.getElementById("gallery-section").style.display = "none";
     }
+    // Function for the gallery buttons
+
+    previousButton.addEventListener("click", () => {
+            imageIndex = imageIndex - 1;
+            refreshGallery(
+                gallery, 
+                imageIndex, 
+                galleryContainer, 
+                previousButton, 
+                nextButton, viewableImages)
+    });
+
+    nextButton.addEventListener("click", () => {
+            imageIndex = imageIndex + 1;
+            refreshGallery(
+                gallery, 
+                imageIndex, 
+                galleryContainer, 
+                previousButton, 
+                nextButton, viewableImages)
+    });
+    // Close the active image or the image viewer when clicked
+    const activeContainer = document.getElementById("active-image-container");
+    activeContainer.addEventListener("click", () => {
+        hideActiveImage();
+    });
 });
 
-// ------------------------- Functions -------------------------- //
+// ------------------------- Useable Functions -------------------------- //
 
 function updateDetails(result){
     document.getElementById("project-title").textContent = result.header[0];
@@ -328,4 +338,55 @@ function updateDetails(result){
     if (result.setting[2] === ""){
         document.getElementById("setting-three").classList.add("hide-image");
     }
+}
+
+function refreshGallery(gallery, imageIndex, galleryContainer, previousButton, nextButton, viewableImages){
+    // Remove the current child of GalleryContainer
+    galleryContainer.innerHTML = "";
+
+    // Apply the 3 chosen images depending on the imageIndex
+    gallery.slice(imageIndex, imageIndex+3).forEach(image => {
+        if(image){
+            const galleryImage = document.createElement("img"); 
+            galleryImage.src = "../assets/img/gallery/"+image.replace(/\d+/,"").replace(".png","")+"/"+image;
+            galleryImage.classList.add("viewable-image");
+
+            // viewImage(viewableImages);
+
+            viewableImages.forEach(image => {
+                galleryImage.addEventListener("click", () => {
+                    showActiveImage(galleryImage.src);
+                });
+            });
+            galleryContainer.appendChild(galleryImage);
+        }
+    });
+    // For refreshing buttons
+    if (imageIndex <= 0) {
+        previousButton.style.display = "none";
+        nextButton.style.display = "flex";
+    } else if (imageIndex + 3 >= gallery.length) {
+        previousButton.style.display = "flex";
+        nextButton.style.display = "none";
+    } else {
+        previousButton.style.display = "flex";
+        nextButton.style.display = "flex";
+    }
+}
+
+function viewImage(viewableImages){
+    // Function for image viewer
+    console.log(viewableImages);
+    const activeContainer = document.getElementById("active-image-container");
+
+        viewableImages.forEach(image => {
+            image.addEventListener("click", () => {
+                showActiveImage(image.src);
+
+                activeContainer.addEventListener("click", () => {
+
+                    hideActiveImage();
+                });
+            });
+        });
 }
