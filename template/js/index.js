@@ -1,5 +1,4 @@
 // Click and hover functions for the SOCIAL MEDIA icons
-
 const mediaData = {
     "facebook-icon": {
         hover : "../assets/img/icons/Facebook-Icon.png",
@@ -28,31 +27,7 @@ const mediaData = {
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    const mediaIcons = document.querySelectorAll(".media-icons");
-
-    mediaIcons.forEach(media => {
-        const id = media.id;
-        // Hover in
-        media.addEventListener("mouseenter", () => {
-            media.src = mediaData[id].hover;
-        });
-        // Hover out
-        media.addEventListener("mouseleave", () => {
-            media.src = mediaData[id].default;
-        });
-        // Click
-        media.addEventListener("click", () => {
-            const confirmed = confirm(`Go to ${mediaData[id].link}?`);
-            if (confirmed){
-                window.location.href = mediaData[id].link;
-            }
-        });
-    });
-})
-
 // Click function for the SKILLS button
-
 const languageData = {
     "html": {
         click : "../assets/img/icons/HTML-Icon-Clicked.png",
@@ -121,7 +96,27 @@ const languageData = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+    const mediaIcons = document.querySelectorAll(".media-icons");
 
+    mediaIcons.forEach(media => {
+        const id = media.id;
+        // Hover in
+        media.addEventListener("mouseenter", () => {
+            media.src = mediaData[id].hover;
+        });
+        // Hover out
+        media.addEventListener("mouseleave", () => {
+            media.src = mediaData[id].default;
+        });
+        // Click
+        media.addEventListener("click", () => {
+            const confirmed = confirm(`Go to ${mediaData[id].link}?`);
+            if (confirmed){
+                window.location.href = mediaData[id].link;
+            }
+        });
+    });
+    // 
     const languageIcons = document.querySelectorAll(".language-buttons");
 
     let activeSkill = null;
@@ -192,9 +187,71 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Function for about me section showing the titles
+    const aboutCard = {
+        "introduction": {
+            title : "Introduction",
+            icon : "",
+            about : "I'm a Bachelor of Science in Information Technology graduate currently working as a Data Analyst at Accenture. My interest in programming began during my time at Advanced Computer Training School, where I first experienced building simple programs. That early exposure sparked my curiosity and led me to pursue a career in web development and game development.",
+            footer : ""
+        },
+        "journey": {
+            title : "My Journey",
+            icon : "",
+            about : "I enjoy both frontend and backend development, though frontend excites me the most because I love designing and creating interactive user experiences. During college, I developed business systems and explored game development using Godot Engine. Although I didn’t complete my game project, the process deepened my understanding of logic, structure, and creative problem-solving.",
+            footer : ""
+        },
+        "mindset": {
+            title : "My Mindset",
+            icon : "",
+            about : "What sets me apart from other developers is my competitiveness and curiosity. I am naturally driven to achieve the best possible results, and when something catches my interest, I actively study and seek answers until I understand it. That curiosity pushes me to continuously improve, explore new technologies, and strengthen my skills.",
+            footer : ""
+        },
+        "future": {
+            title : "Future Goals",
+            icon : "",
+            about : "Currently, I am refocusing on sharpening my web development expertise while also exploring Artificial Intelligence to stay aligned with the evolving tech landscape. My goal is to grow as a Full Stack Developer or Software Engineer to build scalable, efficient, and meaningful digital solutions.",
+            footer : ""
+        }
+    }
+    let letterIndex = 0;
+    let typingAnimation = false;
+
+    Object.values(aboutCard).forEach(card => {
+        if(card){
+            const aboutContainer = document.getElementById("about-container");
+            const cardContainer = document.createElement("div");
+            const cardIcon = document.createElement("img");
+            const cardTitle = document.createElement("h2");
+            const cardAbout = document.createElement("h3");
+            const cardFooter = document.createElement("img");
+
+            cardContainer.classList.add("about-wrapper");
+            cardAbout.classList.add("card-about");
+
+            cardTitle.textContent = card.title;
+            cardAbout.textContent = card.about;
+
+            aboutContainer.appendChild(cardContainer);
+            cardContainer.appendChild(cardTitle);
+            cardContainer.appendChild(cardAbout);
+
+            cardAbout.style.display = "none";
+
+            // Function for about me when a card is clicked it will show
+            cardContainer.addEventListener("click", () => {
+                if(cardAbout.style.display == "none"){
+                    cardAbout.style.display = "flex";
+
+                } else if(cardAbout.style.display == "flex"){
+                    cardAbout.style.display = "none";
+                }
+            });
+        }
+    });
 });
 
-// ------------------------- Functions -------------------------- //
+// ------------------------- Useable Functions -------------------------- //
 
 function resetIcons(languageIcons) {
     languageIcons.forEach(lang => {

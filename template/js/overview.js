@@ -17,7 +17,7 @@ const projectDetails = {
         setting : ["Personal Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "Javascript", "SQL"],
         tools : ["VS Code", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "web-three": {
         header : ["Dental Clinic Management System", "Web App", "2023"],
@@ -44,7 +44,7 @@ const projectDetails = {
         setting : ["School Project", "", ""],
         tech : ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
         tools : ["VS Code", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "web-template": {
         header : ["", "Web App", ""],
@@ -53,7 +53,7 @@ const projectDetails = {
         setting : ["", "", ""],
         tech : ["", "", ""],
         tools : ["", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     // PIXEL data storage
     "pixel-one": {
@@ -62,7 +62,7 @@ const projectDetails = {
         about : "Spirited Away Train Scene is a pixel art animation inspired by a memorable scene from Spirited Away, featuring characters such as Chihiro, No-Face, Boh in his mouse form, and Zeniba’s Shikigami. The artwork captures a calm and whimsical moment as the characters ride a train across the ocean, emphasizing a peaceful atmosphere and a sense of quiet adventure. The ocean backdrop enhances the serene mood, creating a dreamlike feeling that reflects the emotional tone of the original scene. The animation was created by designing each frame individually using Aseprite, focusing on smooth motion and consistent character expression throughout the sequence. After completing the frame-by-frame artwork, a video editing software was used to compile the frames into a looping GIF. This project helped strengthen my understanding of pixel animation workflows, timing, and storytelling through movement, while also improving my skills in frame consistency and animation composition.",
         setting : ["Pixel Art", "April 04, 2025", "3200 x 1800"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-two": {
         header : ["Finn's Swords", "Pixel Art", "2023"],
@@ -70,7 +70,7 @@ const projectDetails = {
         about : "Finn’s Sword is a pixel art piece inspired by Adventure Time, focusing on Finn and showcasing his main swords throughout the series. The artwork highlights the iconic weapons associated with the character, capturing the adventurous and nostalgic feel of the show. It was created using Aseprite, with attention given to clean pixel detailing and visual consistency to reflect the style and charm of the original animation. This piece was inspired by my appreciation for the cartoon, especially its unique storytelling. Working on this project allowed me to practice pixel art fundamentals such as shape design, shading, and object variation while recreating recognizable elements in a simplified pixel style.",
         setting : ["Pixel Art", "September 03, 2023", "5120 x 2560"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-three": {
         header : ["Low Level Dead World", "Pixel Art", "2024"],
@@ -78,7 +78,7 @@ const projectDetails = {
         about : "Low Level Dead World is a pixel art piece inspired by Adventure Time, depicting the eerie yet playful ghost dimension where Jake’s death is referenced in the series. The scene showcases various ghostly characters and objects floating within a dim, abandoned environment, capturing the strange afterlife setting of the show. Despite its unsettling theme, the composition still maintains the cartoon’s signature charm and humor through its simplified character designs and whimsical layout. What makes this piece unique is its highly constrained color approach, where an almost single-color palette is used to build the entire environment. Depth, mood, and visual interest are achieved entirely through careful shading, lighting, and contrast rather than multiple colors. Created in Aseprite, this project helped strengthen my understanding of value control, atmospheric design, and how limited palettes can still produce visually rich and expressive scenes.",
         setting : ["Pixel Art", "September 05, 2024", "4100 x 1560"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-four": {
         header : ["Lotlot's Terraria Set", "Pixel Art", "2023"],
@@ -86,7 +86,7 @@ const projectDetails = {
         about : "Lotlot’s Terraria Set is a pixel art equipment set created for a community activity inspired by the game Terraria, where participants were challenged to design their own original armor and weapon sets. The collection includes a complete armor set, weapons, tools, and accessories designed around a unified visual theme. The artwork reflects my favorite color, green, which served as the primary inspiration for the set’s appearance, giving it a vibrant and distinctive identity while maintaining the recognizable style of Terraria’s pixel art. Created in Aseprite, this project focused on designing a cohesive set of game assets that could naturally fit within Terraria’s world. Special attention was given to maintaining consistency across the armor pieces, weapons, and tools while ensuring that each item remained visually unique and recognizable. Through this project, I further developed my skills in pixel art design, color harmony, and creating game-ready assets within the constraints of an established art style.",
         setting : ["Pixel Art", "December 21, 2023", "740 x 360"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-five": {
         header : ["Crying Jake", "Pixel Art", "2023"],
@@ -94,7 +94,7 @@ const projectDetails = {
         about : "Crying Jake is a pixel art recreation of an emotional scene from Adventure Time, inspired by the moment when the Tree House—the home shared by Finn and Jake—is destroyed. The artwork captures Jake in a state of sadness and grief, while BMO comforts him with a gentle embrace. Although the scene is heartbreaking, it also highlights the strong bond between the characters, creating a touching balance between sorrow and warmth. Created in Aseprite, this piece focuses on expressing emotion through character poses, facial expressions, and composition rather than action or complex effects. The contrast between Jake’s sadness and BMO’s comforting presence helps tell the story instantly, even in a single frame. This project allowed me to practice conveying feelings through pixel art while recreating one of the most memorable and heartfelt moments from the series.",
         setting : ["Pixel Art", "August 19, 2023", "1280 x 1280"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-six": {
         header : ["Gazer", "Pixel Art", "2024"],
@@ -102,7 +102,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "March 23, 2024", "1600 x 1600"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-seven": {
         header : ["My Homie", "Pixel Art", "2023"],
@@ -110,7 +110,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "December 21, 2023", "320 x 320"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-eight": {
         header : ["Finn", "Pixel Art", "2023"],
@@ -118,7 +118,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "November 27, 2023", "320 x 320"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-nine": {
         header : ["Jake", "Pixel Art", ""],
@@ -126,7 +126,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "November 27, 2023", "320 x 320"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-ten": {
         header : ["Princess Bubblegum", "Pixel Art", ""],
@@ -134,7 +134,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "November 27, 2023", "320 x 320"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-eleven": {
         header : ["Ice King", "Pixel Art", "2023"],
@@ -142,7 +142,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "November 27, 2023", ""],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-twelve": {
         header : ["The Trio", "Pixel Art", ""],
@@ -150,7 +150,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "Febuary 22, 2024", "600 x 1000"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-thirteen": {
         header : ["Adventure Time Wallpaper", "Pixel Art", "On-Progress"],
@@ -158,7 +158,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "On-Progress", "7200 x 4500"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-fourteen": {
         header : ["Food Processing", "Pixel Art", "2024"],
@@ -166,7 +166,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "April 03, 2024", "1920 x 1920"],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     // Not applied yet pls apply LATER!!!
     "pixel-fifteen": {
@@ -175,7 +175,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "On-Progress", ""],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "pixel-template": {
         header : ["", "Pixel Art", ""],
@@ -183,7 +183,7 @@ const projectDetails = {
         about : "",
         setting : ["Pixel Art", "", ""],
         tools : ["Aseprite", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     // APP data storage
     "app-one": {
@@ -192,7 +192,7 @@ const projectDetails = {
         about : "",
         setting : ["", "", ""],
         tools : ["", "", ""],
-        gallery : ["", "", ""]
+        gallery : []
     },
     "app-template": {
         header : ["", "", ""],
@@ -211,10 +211,8 @@ document.addEventListener("DOMContentLoaded", () => {
     homeWrapper.addEventListener("click", () => {
         window.location.href = "index.html#third-section";
     });
-});
 
-// Function when the load pages the description of the project will be displayed
-document.addEventListener("DOMContentLoaded", () => {
+    // Function when the load pages the description of the project will be displayed
     const page = (new URLSearchParams(window.location.search)).get("id");
     const result = page.slice(page.indexOf('-') + 1); // Remove the "project-" from the id
     if (result) {
@@ -222,12 +220,16 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.log("Failed to Load Project Details");
     }
-});
 
-// Displaying the techs
-document.addEventListener("DOMContentLoaded", () => {
+    // View image function for banner image
+    const projectBanner = document.getElementById("project-banner");
+
+    projectBanner.addEventListener("click", () => {
+        showActiveImage(projectBanner.src);
+    });
+
+    // Displaying the techs
     const techContainer = document.getElementById("tech-images");
-    const page = (new URLSearchParams(window.location.search)).get("id");
     const id = page.slice(page.indexOf('-') + 1); // Remove the "project-" from the id
     const projectType = page.slice(page.indexOf('-') + 1, page.lastIndexOf('-') + 0); // Remove all words and characters except the one between two '-'
     // If the project is not web or app it will remove the tech wrapper
@@ -281,9 +283,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const galleryContainer = document.getElementById("gallery-wrapper");
     let imageIndex = 0;
     const gallery = projectDetails[id].gallery;
+    const gallerySection = document.getElementById("gallery-section");
     const previousButton = document.getElementById("previous-button");
     const nextButton = document.getElementById("next-button");
     const viewableImages = document.querySelectorAll(".viewable-image");
+
+    // Checking if the project has a gallery
+    const galleryLength = gallery.slice(imageIndex, imageIndex+3);
+
+    if (galleryLength.length == 0) {
+        gallerySection.style.display = "none";
+    }
 
     if(projectType !== "pixel"){
             refreshGallery(
@@ -292,8 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 galleryContainer, 
                 previousButton, 
                 nextButton, viewableImages)
-    } else {
-        document.getElementById("gallery-section").style.display = "none";
     }
     // Function for the gallery buttons
 
@@ -347,11 +355,9 @@ function refreshGallery(gallery, imageIndex, galleryContainer, previousButton, n
     // Apply the 3 chosen images depending on the imageIndex
     gallery.slice(imageIndex, imageIndex+3).forEach(image => {
         if(image){
-            const galleryImage = document.createElement("img"); 
+            const galleryImage = document.createElement("img");
             galleryImage.src = "../assets/img/gallery/"+image.replace(/\d+/,"").replace(".png","")+"/"+image;
             galleryImage.classList.add("viewable-image");
-
-            // viewImage(viewableImages);
 
             viewableImages.forEach(image => {
                 galleryImage.addEventListener("click", () => {
@@ -374,19 +380,18 @@ function refreshGallery(gallery, imageIndex, galleryContainer, previousButton, n
     }
 }
 
-function viewImage(viewableImages){
-    // Function for image viewer
-    console.log(viewableImages);
-    const activeContainer = document.getElementById("active-image-container");
+// function viewImage(viewableImages){
+//     // Function for image viewer
+//     const activeContainer = document.getElementById("active-image-container");
 
-        viewableImages.forEach(image => {
-            image.addEventListener("click", () => {
-                showActiveImage(image.src);
+//         viewableImages.forEach(image => {
+//             image.addEventListener("click", () => {
+//                 showActiveImage(image.src);
 
-                activeContainer.addEventListener("click", () => {
+//                 activeContainer.addEventListener("click", () => {
 
-                    hideActiveImage();
-                });
-            });
-        });
-}
+//                     hideActiveImage();
+//                 });
+//             });
+//         });
+// }

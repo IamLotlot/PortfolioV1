@@ -69,12 +69,34 @@ nav ul li a{
     font-size: 5rem;
     color: var(--black);
 }
-#para-container{
-    padding: 0 5rem 0 5rem;
+#about-container{
+    width: 80%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+.about-wrapper{
+    width: 20rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    background-color: var(--black);
+}
+#about-container h2{
+    font-size: 2.5rem;
+    padding: 1rem;
+    font-family: VT323;
+    color: var(--green);
+}
+#about-container h3{
+    font-size: 1.3rem;
+    font-family: Belanosima;
+    color: var(--white);
 }
 .paragraph{
     margin-top: 2rem;
