@@ -54,7 +54,7 @@ nav ul li{
     margin-right: 1.2rem;
 }
 nav ul li a{
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--black);
   	text-decoration: none;
 	font-weight: bold;
@@ -365,13 +365,16 @@ nav ul li a{
     width: 20rem;
     background-image: url("../../assets/img/thumbnails/pixel/Food-Processing-Equipments.png");
 }
-/* #project-pixel-fifteen{
-    width: 20rem;
-    background-image: url("../../assets/img/thumbnails/pixel/Pricess-Bubblegum.gif");
-} */
+#project-pixel-fifteen{
+    width: 40rem;
+    background-image: url("../../assets/img/thumbnails/pixel/High-School.gif");
+}
 /* Applications */
 #project-app-one{
     background-image: url("../../assets/img/thumbnails/app/TSBS.png");
+}
+#project-app-two{
+    background-image: url("../../assets/img/thumbnails/app/World-of-Boldur.png");
 }
 #fourth-section{
     display: flex;
@@ -487,10 +490,10 @@ nav ul li a{
     justify-content: center;
 }
 #email-icon{
-    width: 10vw;
+    width: 5vw;
 }
 #phone-icon{
-    width: 10vw;
+    width: 5vw;
 }
 .contact-con h2{
     font-size: clamp(2rem, 2vw + 1rem, 4rem);
